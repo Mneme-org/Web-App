@@ -1,5 +1,5 @@
 body {
-  background-color: #0B132B;
+  background-color:   #006064;
   color: white;
   display: flex;
   height: 100vh;
@@ -21,14 +21,14 @@ body {
 
 .journals {
   grid-area: jr;
-  border: solid white;
+  border: solid #121212;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .settings {
   grid-area: st;
-  border: solid white;
+  border: solid #121212;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -36,8 +36,7 @@ body {
 }
 .entries {
   grid-area: en;
-  background-color: #3A506B;
-  border: solid white;
+  border: solid #121212;
 }
 .entry-input {
   flex-direction: column;
@@ -49,12 +48,12 @@ body {
 }
 .entry-section{
   grid-area: main;
-  border: solid white;
+  border: solid #121212;
   height: 100%;
 }
 .edit {
   grid-area: ed;
-  border: solid white;
+  border: solid #121212;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -71,7 +70,7 @@ textarea {
 }
 .month-header {
   text-align: center;
-  border-bottom: solid white;
+  border-bottom: solid #121212;
 }
 .settings-class {
   align-content: center;

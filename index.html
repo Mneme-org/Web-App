@@ -1,55 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>mneme</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/form-style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>mneme</title>
 </head>
-<body>
-  <div class="wrapper">
-    <section class="journals">
-      <img src='images/logo.svg' alt='mneme logo' class='journals_logo-main'>
-      <button class='btn journals_entries-btn journals_entries-btn--red'>All Entries</button>
-    </section>
-    <section class="settings">
-      <button class="btn btn-primary">Settings</button>
-      <button id="new-journal" class="btn btn-primary btn-group-vertical">New Journal</button>
-    </section>
-    <section class="entries">
-      <h3 class='month-header'><time datetime="2020-06">June 2020</time></h3>
-    </section>
-    <section class="entry-section">
-      <div class="entry-input container-fluid">
-        <h3><time datetime="2020-06-21">June 21, 2020</time></h3>
-        <form method="post" action="add-new-entry" id="form-entry">
-          <div class="input-group">
-              <div class="input-group-prepend">
-                  <span class="input-group-text" id="entry-title">Title</span>
-              </div>
-              <input class="form-control" type="text" name="entry-title" placeholder="My Entry" aria-label="My Entry" aria-describedby="entry-title">
-          </div>
-          <div class="form-group">
-              <label for="entry-content">Content</label>
-              <textarea id="entry-content" class="form-control" name="entry content"></textarea>
-          </div>
-          <button class="btn btn-secondary" type="submit">Save</button>
-      </form>
-      </div>
-    </section>
-    <section class="edit">
-      <button id="new-journal" class="btn btn-primary btn-group-vertical">Tags</button>
-      <button class="btn btn-primary">Journal Name</button>
-    </section>
+  <body>
+    <!--Navbar-->
+  <div class="header" ng-app="">
+    <ul>
+      <li><a href="html/register.html">Register</a></li>
+    </ul>
   </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
-      <script src="js/index.js"></script>
-</body>
+  <div class="login-form">
+    <h3>Login</h3>
+    <form>
+      <input id="username" type="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
+    </form>
+    <button onclick=token()>Submit</button>
+  </div>
+  <script src="assets/js/login.js"></script>
+  </body>
 </html>
