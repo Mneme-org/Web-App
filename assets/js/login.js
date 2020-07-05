@@ -4,7 +4,7 @@ async function token() {
 
     let data = { username: username, password: password };
 
-    const response = await fetch('https://mneme.spyrosr.xyz/token', {
+    const response = await fetch('https://www.mneme.spyrosr.xyz/login', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
@@ -18,6 +18,8 @@ async function token() {
 
     if (statusCode === 422 || statusCode === 405) {
         console.log('Error')
-        window.location.replace('/html/home.html')
+        return
     }
+
+    window.location.replace('/html/home.html')
 }
