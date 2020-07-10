@@ -4,7 +4,7 @@ async function token() {
 
     let data = { username: username, password: password };
 
-    const response = await fetch('https://mneme.spyrosr.xyz/token', {
+    const response = await fetch('http://127.0.0.1:8000/token', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
