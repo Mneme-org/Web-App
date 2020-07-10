@@ -6,20 +6,29 @@
   <link rel="stylesheet" href="assets/css/form-style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <title>mneme</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-  <body>
-    <!--Navbar-->
-  <div class="header" ng-app="">
-    <ul>
-      <li><a href="html/register.html">Register</a></li>
-    </ul>
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+    <!-- Login Form -->
+    <div class="login-form">
+      <h3>Login</h3>
+      <input type="email" name="username" id="username" placeholder="Email" class="fadeIn second">
+      <input type="password" name="password" id="password" placeholder="Password" class="fadeIn third">
+      <button onclick=token() class="fadeIn fourth ">Log In</button>
+    </div>
+
+    <!-- Remind Password -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+      <a class="underlineHover" href="html/register.html">Register</a>
+    </div>
+
   </div>
-  <div class="login-form">
-    <h3>Login</h3>
-    <input type="email" name="username" id="username" placeholder="Email">
-    <input type="password" name="password" id="password" placeholder="Password">
-    <button onclick=token()>Submit</button>
-  </div>
-  <script src="assets/js/login.js"></script>
-  </body>
+</div>
+<script src="assets/js/login.js"></script>
 </html>
