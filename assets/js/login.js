@@ -4,19 +4,22 @@ async function token() {
 
     let data = { username: username, password: password };
 
-<<<<<<< HEAD
-    const response = await fetch('http://127.0.0.1:8000/token', {
-=======
-    const response = await fetch('https://www.mneme.spyrosr.xyz/login', {
->>>>>>> master
-        method: 'POST', // or 'PUT'
+    console.log(data)
+
+    const options = {
+        method: 'POST',
+        body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
-    })
+    }
+
+    const response = await fetch('https://mneme.spyrosr.xyz/login', options) // TODO: Make this a variable value
 
     const statusCode = await response.status;
+    const statusJSON = await response.json();
+
+    console.log(statusJSON.access_token)
 
     console.log(statusCode)
 
@@ -25,5 +28,6 @@ async function token() {
         return
     }
 
-    window.location.replace('/html/home.html')
+    document.cookie = "accessToken=; path=/home";
+    window.location.replace("/html/home.html");
 }

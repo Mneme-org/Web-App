@@ -3,21 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mneme - register</title>
-  <link rel="stylesheet" href="/assets/css/form-style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>mneme</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/form-style.css">
 </head>
-  <!--Navbar-->
-  <div class="header">
-    <ul>
-      <li><a href="../index.html">Login</a></li>
-    </ul>
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+    <!-- Login Form -->
+    <div class="login-form">
+      <h3 class="form-title">Register</h3>
+      <input type="email" name="username" id="username" placeholder="Email" class="fadeIn second">
+      <input type="password" name="password" id="password" placeholder="Password" class="fadeIn third">
+      <button class="fadeIn fourth ">Register</button>
+    </div>
+
+    <!-- Remind Password -->
+    <div id="formFooter">
+      <a class="underlineHover" href="../index.html">Log In</a>
+    </div>
+
   </div>
-  <div class="register-form">
-    <h3>Register</h3>
-    <form>
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Password">
-    </form>
-    <button>Submit</button>
-  </div>
+</div>
 </html>

@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/form-style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <title>mneme</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/form-style.css">
+  <script src="assets/js/login.js"></script>
 </head>
 
 <div class="wrapper fadeInDown">
@@ -16,7 +17,7 @@
 
     <!-- Login Form -->
     <div class="login-form">
-      <h3>Login</h3>
+      <h3 class="form-title">Login</h3>
       <input type="email" name="username" id="username" placeholder="Email" class="fadeIn second">
       <input type="password" name="password" id="password" placeholder="Password" class="fadeIn third">
       <button onclick=token() class="fadeIn fourth ">Log In</button>
@@ -30,5 +31,4 @@
 
   </div>
 </div>
-<script src="assets/js/login.js"></script>
 </html>

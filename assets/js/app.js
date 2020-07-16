@@ -21,3 +21,11 @@ async function token() {
         window.location.replace('/html/home.html')
     }
 }
+
+async function add_entry() {
+    let entryTitle = document.getElementById("entry-title").value;
+    let entryDate = document.getElementById("entry-date").value;
+    let entryContent = document.getElementById("entry-content").value
+
+    console.log(document.cookie)
+}

@@ -24,20 +24,21 @@
     </section>
     <section class="entry-section">
       <div class="entry-input container-fluid">
-        <h3><time datetime="2020-06-21">June 21, 2020</time></h3>
-        <form method="post" action="add-new-entry" id="form-entry">
           <div class="input-group">
               <div class="input-group-prepend">
-                  <span class="input-group-text" id="entry-title">Title</span>
+                  <span class="input-group-text">Title</span>
               </div>
-              <input class="form-control" type="text" name="entry-title" placeholder="My Entry" aria-label="My Entry" aria-describedby="entry-title">
-          </div>
+              <input class="form-control" type="text" id="entry-title" name="entry-title" placeholder="My Entry" aria-label="My Entry" aria-describedby="entry-title">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Date</span>
+              </div>
+              <input class="form-control" type="text" id="entry-date" name="entry-date" placeholder="A Date" aria-label="Date Entry" aria-describedby="entry-date">
+            </div>
           <div class="form-group">
               <label for="entry-content">Content</label>
               <textarea id="entry-content" class="form-control" name="entry content"></textarea>
           </div>
-          <button class="btn btn-secondary" type="submit">Save</button>
-      </form>
+          <button class="btn btn-secondary entry-button" type="submit" onclick=add_entry()>Save</button>
       </div>
     </section>
     <section class="edit">
@@ -50,5 +51,6 @@
       crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
+  <script src="../assets/js/app.js"></script>
 </body>
 </html>
