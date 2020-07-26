@@ -23,11 +23,13 @@ async function token() {
 
     console.log(statusCode)
 
-    if (statusCode === 422 || statusCode === 405) {
-        console.log('Error')
+    if (statusCode === 200) {
+        localStorage.setItem("accessToken", statusJSON.access_token);
+        window.location.replace("/html/home.html");
         return
     }
 
-    document.cookie = "accessToken=; path=/home";
-    window.location.replace("/html/home.html");
+    console.log('Error')
+    window.alert("Wrong Password!")
+    return
 }

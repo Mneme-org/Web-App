@@ -1,5 +1,5 @@
 body {
-  background-color:   #006064;
+  background-color:   #9c89b8;
   color: white;
   display: flex;
   height: 100vh;
@@ -37,6 +37,16 @@ body {
 .entries {
   grid-area: en;
   border: solid #121212;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+.entries-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .entry-input {
   display: flex;
@@ -86,8 +96,11 @@ textarea {
   width: 80%;
 }
 .journals_entries-btn {
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 120%;
   align-items: center;
+  margin: 3%;
 }
 .entry-button {
   text-align: center;
@@ -100,4 +113,9 @@ textarea {
   height: 80%;
   display: flex;
   flex-direction: column;
+}
+.entry {
+  width: 90%;
+  color: white;
+  text-align: left;
 }

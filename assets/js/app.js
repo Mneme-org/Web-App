@@ -1,31 +1,77 @@
-async function token() {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+$(document).ready(async function() {
+    let accessToken = "Bearer " + localStorage.getItem("accessToken");
 
-    let data = { username: username, password: password };
-
-    const response = await fetch('https://mneme.spyrosr.xyz/login', {
-        method: 'POST', // or 'PUT'
+    const options = {
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': accessToken
         },
-        body: JSON.stringify(data),
-    })
+    }
+
+    const response = await fetch('https://mneme.spyrosr.xyz/journals', options)
 
     const statusCode = await response.status;
+    const statusJSON = await response.json();
 
-    console.log(statusCode)
-
-    if (statusCode === 422 || statusCode === 405) {
-        console.log('Error')
-        window.location.replace('/html/home.html')
+    for (const [key, value] of Object.entries(statusJSON)) {
+        console.log(key, value["name"]);
+        var $btn = $("<button>", {"id": value["name"], "class": "btn journals_entries-btn"});
+        $btn.text(value["name"])
+        $btn.click(function() {
+            load_entries();
+          });
+        $("#load-journals").append($btn);
     }
+  });
+
+async function tags() {
+    
 }
 
 async function add_entry() {
     let entryTitle = document.getElementById("entry-title").value;
     let entryDate = document.getElementById("entry-date").value;
-    let entryContent = document.getElementById("entry-content").value
+    let entryContent = document.getElementById("entry-content").value;
+    let accessToken = localStorage.getItem("accessToken");
+}
 
-    console.log(document.cookie)
+async function load_entries() {
+    console.log("Clicked!")
+}
+
+async function add_journal() {
+    let accessToken = "Bearer " + localStorage.getItem("accessToken");
+    let journalTitle = document.getElementById("journal-title").value;
+
+    let data = { name: journalTitle };
+
+    console.log(data)
+
+    const options = {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': accessToken
+        },
+    }
+
+    const response = await fetch('https://mneme.spyrosr.xyz/journals', options)
+
+    const statusCode = await response.status;
+    const statusJSON = await response.json();
+
+    console.log(statusJSON.access_token)
+
+    console.log(statusCode)
+
+    if (statusCode === 201) {
+        window.alert("New journal has been created!")
+        return
+    }
+
+    console.log('Error')
+    window.alert("An error has occurred!")
+    return
 }

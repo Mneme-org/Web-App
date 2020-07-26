@@ -13,14 +13,22 @@
   <div class="wrapper">
     <section class="journals">
       <img src='../assets/img/logo.svg' alt='mneme logo' class='journals_logo-main'>
-      <button class='btn journals_entries-btn journals_entries-btn--red'>All Entries</button>
+      <div id="load-journals">
+        <button class='btn journals_entries-btn journals_entries-btn--red'>All Entries</button>
+      </div>
     </section>
     <section class="settings">
-      <button class="btn btn-primary">Settings</button>
-      <button id="new-journal" class="btn btn-primary btn-group-vertical">New Journal</button>
+      <input type="text" id="journal-title" name="journal-title" placeholder="New Journal Title" aria-label="New Journal Title" aria-describedby="journal-title">
+      <button id="new-journal" class="btn btn-secondary btn-group-vertical" onclick=add_journal()>New Journal</button>
+      <button class="btn btn-secondary">Settings</button>
     </section>
     <section class="entries">
       <h3 class='month-header'><time datetime="2020-06">June 2020</time></h3>
+      <div class="entries-wrapper">
+        <button class="btn btn btn-secondary btn-large entry">Entry Title - July 23, 2020: This is a short blurb of the content...</button>
+        <hr>
+        <button class="btn btn btn-secondary btn-large entry">Entry Title</button>
+      </div>
     </section>
     <section class="entry-section">
       <div class="entry-input container-fluid">
@@ -42,8 +50,8 @@
       </div>
     </section>
     <section class="edit">
-      <button id="new-journal" class="btn btn-primary btn-group-vertical">Tags</button>
-      <button class="btn btn-primary">Journal Name</button>
+      <button id="tags" class="btn btn-secondary btn-group-vertical" onclick=tags()>Tags</button>
+      <button class="btn btn-secondary">Journal Name</button>
     </section>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
