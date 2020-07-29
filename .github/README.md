@@ -6,7 +6,7 @@ mneme web app
 
 ## About mneme web app:
 
-The web app for the mneme self-hosted journal, in order to use this app it must be installed alongside the [mneme API](). A cross-platform way to use mneme, and is highly recommended to install!
+The web app for the mneme self-hosted journal, in order to use this app it must be installed alongside the [mneme API](https://github.com/Mneme-org/API). A cross-platform way to use mneme, and is highly recommended to install!
 
 ### License:
 
