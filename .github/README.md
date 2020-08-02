@@ -10,8 +10,6 @@ The web app for the mneme self-hosted journal, in order to use this app it must 
 
 ### License:
 
-Support mneme through GitHub Sponsors or through supporting early!
-
 Distributed under the GNU Public License (GPLv3) (See accompanying file LICENSE)
 
 ## Getting started
@@ -21,7 +19,11 @@ Will be worked on when the first release is public.
 ## How to contribute
 ### GitHub website
 The best way to help is to use GitHub:
-- Please fill bug reports and feature requests here: https://github.com/TheCatster/PassCLI/issues
+- Please fill bug reports and feature requests here
 - Fork the repository, make some small changes and submit them with a PR
+
+### Donating
+
+Support mneme through GitHub Sponsors or through supporting early with a membership!
 
 Keywords: javascript, self-hosted, journal, html, css, diary
