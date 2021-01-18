@@ -1,5 +1,7 @@
-mneme web app
----------
+# Archived in favour of a (more or less) single codebase for apps. Please check out mneme-apps 
+
+## mneme web app
+
 [![release](https://img.shields.io/github/release/Mneme-org/Web-App.svg)](https://github.com/Mneme-org/Web-App/releases) ![Discord](https://img.shields.io/discord/733675685930991706?label=discord) ![Issues](https://img.shields.io/github/issues/Mneme-org/Web-App) ![License](https://img.shields.io/github/license/Mneme-org/Web-App)
 
 **Work In Progress Repo**
